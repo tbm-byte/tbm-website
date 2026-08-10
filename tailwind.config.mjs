@@ -15,6 +15,14 @@ export default {
         'gray-muted': '#687280',
         border: '#E5E7EB',
         white: '#FFFFFF',
+        // Not in the CLAUDE.md token table. Plain `blue` (3.65:1) and
+        // `gray-muted` (3.88:1) both fail AA against `charcoal` — these are
+        // the lightened equivalents the design export uses, only inside the
+        // one dark (Guarantee) section, so that section can pass 4.5:1.
+        'blue-light': '#7CA3F7',
+        'charcoal-muted': '#9AA2AE',
+        'charcoal-body': '#E8EAEE',
+        'charcoal-border': '#23262D',
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

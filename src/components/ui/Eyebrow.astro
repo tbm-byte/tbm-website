@@ -3,11 +3,15 @@
 interface Props {
   class?: string;
   as?: 'div' | 'span' | 'p';
+  /** 'blue-light' is the on-charcoal variant used inside the dark Guarantee section. */
+  color?: 'blue' | 'blue-light';
 }
 
-const { class: className = '', as: Tag = 'div' } = Astro.props;
+const { class: className = '', as: Tag = 'div', color = 'blue' } = Astro.props;
+
+const colorClass = color === 'blue-light' ? 'text-blue-light' : 'text-blue';
 ---
 
-<Tag class:list={['text-xs font-medium uppercase tracking-widest text-blue', className]}>
+<Tag class:list={['text-xs font-medium uppercase tracking-widest', colorClass, className]}>
   <slot />
 </Tag>

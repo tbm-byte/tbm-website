@@ -1,4 +1,19 @@
 ---
-// STUB — not yet built. See design-prompt.md "10. Closing CTA" and design/NOTES.md.
-// id="book", bg="gray-light", borderTop. Centered H2 + one line + single primary Button.
+import Section from './ui/Section.astro';
+import Button from './ui/Button.astro';
 ---
+
+<Section id="book" bg="gray-light" borderTop>
+  <div class="mx-auto max-w-text text-center">
+    <h2 class="text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-charcoal md:text-[40px]">
+      Let's find out whether this fits your firm.
+    </h2>
+    <p class="mt-5 text-[17px] leading-[1.6] text-gray-muted">
+      A 30-minute call covering your current intake, your case mix, your numbers, and a
+      straight answer either way.
+    </p>
+    <div class="mt-9 flex justify-center">
+      <Button href="mailto:ben@thebenmount.com?subject=Strategy%20call">Book a Strategy Call</Button>
+    </div>
+  </div>
+</Section>

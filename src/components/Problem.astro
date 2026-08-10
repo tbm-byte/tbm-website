@@ -1,5 +1,81 @@
 ---
-// STUB — not yet built. See design-prompt.md "3. The problem" and design/NOTES.md.
-// id="problem", bg="gray-light", borderTop, borderBottom. Eyebrow + H2 + intro line,
-// then a grid of four bordered Cards (1 col mobile / 2 col tablet / 4 col desktop).
+import Section from './ui/Section.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+import Card from './ui/Card.astro';
+import Icon from './ui/Icon.astro';
 ---
+
+<Section id="problem" bg="gray-light" borderTop borderBottom>
+  <div class="max-w-text">
+    <Eyebrow>The situation</Eyebrow>
+    <h2 class="mt-5 text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-charcoal md:text-[40px]">
+      This is what's actually happening.
+    </h2>
+    <p class="mt-5 text-[17px] leading-[1.6] text-gray-muted">
+      Not a generic marketing problem. Four specific failures that show up in immigration
+      practices running paid acquisition.
+    </p>
+  </div>
+
+  <div class="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <Card>
+      <Icon color="blue">
+        <line x1="2" y1="5" x2="22" y2="5"></line>
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <line x1="9" y1="19" x2="15" y2="19"></line>
+      </Icon>
+      <h3 class="mt-6 text-xl font-semibold leading-[1.3] tracking-[-0.01em] text-charcoal">
+        Your calendar fills with people you can't help
+      </h3>
+      <p class="mt-3 text-base leading-[1.6] text-gray-muted">
+        Consultations arrive from the wrong case categories, outside your jurisdiction, or with
+        a filing history that rules the case out in the first four minutes. The slot is gone
+        either way, and so is the hour.
+      </p>
+    </Card>
+
+    <Card>
+      <Icon color="blue">
+        <circle cx="8" cy="8" r="5.5"></circle>
+        <circle cx="16" cy="16" r="5.5"></circle>
+      </Icon>
+      <h3 class="mt-6 text-xl font-semibold leading-[1.3] tracking-[-0.01em] text-charcoal">
+        The lead is Spanish-speaking, the intake isn't
+      </h3>
+      <p class="mt-3 text-base leading-[1.6] text-gray-muted">
+        The inquiry comes in one language and the follow-up goes out in another. Nobody records
+        it as a lost case. It simply dies in the gap between the ad and the phone call.
+      </p>
+    </Card>
+
+    <Card>
+      <Icon color="blue">
+        <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+        <polyline points="7.5,12 10.5,15 16.5,9"></polyline>
+      </Icon>
+      <h3 class="mt-6 text-xl font-semibold leading-[1.3] tracking-[-0.01em] text-charcoal">
+        Every ad and page is a compliance exposure
+      </h3>
+      <p class="mt-3 text-base leading-[1.6] text-gray-muted">
+        Platform policy for immigration advertising, FTC substantiation for claims, and your
+        state bar's advertising rules all apply at once. Most agencies have never read any of
+        the three.
+      </p>
+    </Card>
+
+    <Card>
+      <Icon color="blue">
+        <circle cx="12" cy="12" r="9"></circle>
+        <polyline points="12,7 12,12 16,14" fill="none"></polyline>
+      </Icon>
+      <h3 class="mt-6 text-xl font-semibold leading-[1.3] tracking-[-0.01em] text-charcoal">
+        A six-month decision cycle beats a two-week follow-up
+      </h3>
+      <p class="mt-3 text-base leading-[1.6] text-gray-muted">
+        Immigration decisions wait on money, documents and family conversations. A sequence
+        that stops after two weeks hands the case to whichever firm is still present when the
+        decision is actually made.
+      </p>
+    </Card>
+  </div>
+</Section>

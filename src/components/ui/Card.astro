@@ -3,14 +3,21 @@
 interface Props {
   bg?: 'white' | 'gray-light';
   as?: 'div' | 'li';
+  /** Override the default 32px padding — sections measure different values. */
+  padding?: string;
   class?: string;
 }
 
-const { bg = 'white', as: Tag = 'div', class: className = '' } = Astro.props;
+const {
+  bg = 'white',
+  as: Tag = 'div',
+  padding = 'p-8',
+  class: className = '',
+} = Astro.props;
 
 const bgClass = bg === 'gray-light' ? 'bg-gray-light' : 'bg-white';
 ---
 
-<Tag class:list={['rounded-card border border-border p-8', bgClass, className]}>
+<Tag class:list={['rounded-card border border-border', padding, bgClass, className]}>
   <slot />
 </Tag>
