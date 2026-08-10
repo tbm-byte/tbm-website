@@ -1,0 +1,13 @@
+---
+// 12px / medium / uppercase / 0.1em tracking / Primary Blue. See CLAUDE.md "Type".
+interface Props {
+  class?: string;
+  as?: 'div' | 'span' | 'p';
+}
+
+const { class: className = '', as: Tag = 'div' } = Astro.props;
+---
+
+<Tag class:list={['text-xs font-medium uppercase tracking-widest text-blue', className]}>
+  <slot />
+</Tag>

@@ -1,0 +1,40 @@
+---
+// Standard section shell: 1120px content container, 24px side gutter,
+// 120px/72px vertical padding (desktop/mobile). See design/NOTES.md.
+interface Props {
+  id: string;
+  bg?: 'white' | 'gray-light' | 'charcoal';
+  borderTop?: boolean;
+  borderBottom?: boolean;
+  class?: string;
+}
+
+const {
+  id,
+  bg = 'white',
+  borderTop = false,
+  borderBottom = false,
+  class: className = '',
+} = Astro.props;
+
+const bgClass = {
+  white: 'bg-white',
+  'gray-light': 'bg-gray-light',
+  charcoal: 'bg-charcoal text-white',
+}[bg];
+---
+
+<section
+  id={id}
+  class:list={[
+    'px-6 py-section-mobile md:py-section',
+    bgClass,
+    borderTop && 'border-t border-border',
+    borderBottom && 'border-b border-border',
+    className,
+  ]}
+>
+  <div class="mx-auto max-w-content">
+    <slot />
+  </div>
+</section>

@@ -1,0 +1,32 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white font-sans text-charcoal antialiased;
+  text-wrap: pretty;
+}
+
+a {
+  color: theme('colors.blue');
+}
+
+/* Measured from design/exported reference; not in the CLAUDE.md token table. */
+::selection {
+  background-color: #dbe5fd;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
