@@ -1,0 +1,242 @@
+---
+import Section from './ui/Section.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+import Card from './ui/Card.astro';
+
+const categories = [
+  'Family petitions',
+  'Removal defense',
+  'Employment visas',
+  'Humanitarian relief',
+  'Naturalization',
+];
+
+const checks = [
+  'Platform advertising policy',
+  'FTC claim substantiation',
+  'State bar advertising rules',
+  'Firm approval on final copy',
+];
+
+const months = ['Month 0', 'Month 3', 'Month 6', 'Month 9', 'Month 12'];
+
+const rowText = 'max-w-[560px]';
+const rowTitle =
+  'mt-4 text-[28px] font-bold leading-tight tracking-[-0.02em] text-charcoal';
+const rowNumeral = 'text-[40px] font-bold leading-none tracking-[-0.02em] text-blue';
+const rowBody = 'mt-4 max-w-[520px] text-[17px] leading-[1.6] text-gray-muted';
+const boxStack = 'mt-7 grid gap-3';
+const boxLabel = 'text-xs font-medium uppercase tracking-widest text-gray-muted';
+const boxText = 'mt-2 text-base leading-normal text-charcoal';
+---
+
+<Section id="method">
+  <div class="max-w-text">
+    <Eyebrow>The system</Eyebrow>
+    <h2 class="mt-5 text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-charcoal md:text-[40px]">
+      Four layers, installed as one system.
+    </h2>
+    <p class="mt-5 text-[17px] leading-[1.6] text-gray-muted">
+      The Screened Pipeline Method. Each layer removes a specific way immigration acquisition
+      breaks down.
+    </p>
+  </div>
+
+  <div class="mt-24 grid gap-24">
+    <!-- 01 Case-Category Routing -->
+    <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+      <div class={rowText}>
+        <div class={rowNumeral}>01</div>
+        <h3 class={rowTitle}>Case-Category Routing</h3>
+        <p class={rowBody}>
+          Family petitions, removal defense, employment visas, humanitarian relief and
+          naturalization are different buyers with different urgency, different budgets and
+          different objections. Each category gets its own campaign, its own screening
+          questions and its own landing page, never one generic funnel splitting into whatever
+          walks in.
+        </p>
+        <div class={boxStack}>
+          <Card bg="gray-light" padding="px-6 py-5">
+            <div class={boxLabel}>So that you can</div>
+            <p class={boxText}>
+              See which categories actually produce retainers in your metro, instead of one
+              blended cost per lead that hides it.
+            </p>
+          </Card>
+          <Card padding="px-6 py-5">
+            <Eyebrow>Which means</Eyebrow>
+            <p class={boxText}>
+              Budget moves toward the case types your firm wants more of, cycle after cycle.
+            </p>
+          </Card>
+        </div>
+      </div>
+      <Card padding="p-10">
+        <div class="flex items-center">
+          <div class="w-[132px] flex-none rounded-lg border-[1.5px] border-charcoal px-3 py-4 text-center text-[13px] font-semibold text-charcoal">
+            Inquiry
+          </div>
+          <div class="h-px w-7 flex-none bg-border"></div>
+          <div class="my-5 w-px flex-none self-stretch bg-border"></div>
+          <div class="grid flex-1 gap-2.5">
+            {
+              categories.map((c) => (
+                <div class="flex items-center">
+                  <span class="h-px w-7 flex-none bg-border" />
+                  <div class="flex flex-1 items-center gap-2.5 rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+                    <span class="h-[6px] w-[6px] flex-none rounded-full bg-blue" />
+                    {c}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </Card>
+    </div>
+
+    <!-- 02 Bilingual Filter Funnel -->
+    <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+      <div class={`${rowText} lg:order-2`}>
+        <div class={rowNumeral}>02</div>
+        <h3 class={rowTitle}>Bilingual Filter Funnel</h3>
+        <p class={rowBody}>
+          Spanish runs the whole way through: ad, landing page, screening form, confirmation
+          and reminders, so an inquiry never arrives in one language and gets answered in
+          another. The screening form asks the disqualifying questions first: category,
+          jurisdiction, filing history, prior counsel, timeline.
+        </p>
+        <div class={boxStack}>
+          <Card bg="gray-light" padding="px-6 py-5">
+            <div class={boxLabel}>So that you can</div>
+            <p class={boxText}>
+              Spend consultation time on people whose case you can actually take, in a language
+              your intake can hold.
+            </p>
+          </Card>
+          <Card padding="px-6 py-5">
+            <Eyebrow>Which means</Eyebrow>
+            <p class={boxText}>
+              Fewer consultations on the calendar, and a higher share of them worth having.
+            </p>
+          </Card>
+        </div>
+      </div>
+      <Card padding="p-10" class="lg:order-1">
+        <div class="grid justify-items-center gap-2.5">
+          <div class="w-full rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
+            Ad, EN / ES
+          </div>
+          <div class="w-[88%] rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
+            Landing page, EN / ES
+          </div>
+          <div class="w-[74%] rounded-lg border-[1.5px] border-blue p-3.5 text-center text-[13px] font-semibold text-blue">
+            Screening form, filter
+          </div>
+          <div class="w-[58%] rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
+            Confirmation, EN / ES
+          </div>
+          <div class="w-[44%] rounded-lg border border-charcoal p-3.5 text-center text-[13px] font-semibold text-charcoal">
+            Your calendar
+          </div>
+        </div>
+      </Card>
+    </div>
+
+    <!-- 03 Compliance Lock -->
+    <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+      <div class={rowText}>
+        <div class={rowNumeral}>03</div>
+        <h3 class={rowTitle}>Compliance Lock</h3>
+        <p class={rowBody}>
+          Nothing goes live until it has been read against three rulebooks: the platform's own
+          policy for legal and immigration advertising, FTC substantiation for any claim made,
+          and your state bar's advertising rules on outcomes, specialization and required
+          disclosures. Your firm approves the final copy before launch.
+        </p>
+        <div class={boxStack}>
+          <Card bg="gray-light" padding="px-6 py-5">
+            <div class={boxLabel}>So that you can</div>
+            <p class={boxText}>
+              Run paid acquisition without an account ban or a bar complaint sitting in the
+              risk column.
+            </p>
+          </Card>
+          <Card padding="px-6 py-5">
+            <Eyebrow>Which means</Eyebrow>
+            <p class={boxText}>The campaign that works this month is still running next quarter.</p>
+          </Card>
+        </div>
+      </div>
+      <Card padding="p-10">
+        <div class="grid gap-3">
+          {
+            checks.map((check) => (
+              <div class="flex items-center gap-3.5 rounded-lg border border-border px-[18px] py-4">
+                <span class="flex h-[18px] w-[18px] flex-none items-center justify-center rounded border-[1.5px] border-blue text-xs font-bold leading-none text-blue">
+                  ✓
+                </span>
+                <span class="text-[13px] font-medium text-charcoal">{check}</span>
+              </div>
+            ))
+          }
+          <div class="mt-2 text-center text-xs font-medium uppercase tracking-widest text-gray-muted">
+            Reviewed before launch
+          </div>
+        </div>
+      </Card>
+    </div>
+
+    <!-- 04 Long-Cycle Nurture Stack -->
+    <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+      <div class={`${rowText} lg:order-2`}>
+        <div class={rowNumeral}>04</div>
+        <h3 class={rowTitle}>Long-Cycle Nurture Stack</h3>
+        <p class={rowBody}>
+          Most immigration decisions are not made the month the inquiry arrives. They wait on
+          money, on a document, on a family conversation. Sequences run across email, SMS and
+          WhatsApp for six to twelve months in both languages, so the firm that is present at
+          the decision is yours.
+        </p>
+        <div class={boxStack}>
+          <Card bg="gray-light" padding="px-6 py-5">
+            <div class={boxLabel}>So that you can</div>
+            <p class={boxText}>
+              Stop writing off every inquiry that says "not yet" as money spent and lost.
+            </p>
+          </Card>
+          <Card padding="px-6 py-5">
+            <Eyebrow>Which means</Eyebrow>
+            <p class={boxText}>Ad spend from month two is still producing consultations in month nine.</p>
+          </Card>
+        </div>
+      </div>
+      <Card padding="p-10" class="lg:order-1">
+        <div class="relative pt-2">
+          <div class="mx-1.5 h-px bg-border"></div>
+          <div class="-mt-[5px] flex justify-between">
+            {
+              months.map((m) => (
+                <div class="flex flex-col items-center gap-3">
+                  <span class="h-[9px] w-[9px] rounded-full bg-blue" />
+                  <span class="text-xs font-medium text-gray-muted">{m}</span>
+                </div>
+              ))
+            }
+          </div>
+          <div class="mt-7 grid gap-2.5">
+            <div class="rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+              Email: filing steps, timelines, cost
+            </div>
+            <div class="rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+              SMS: reminders and re-engagement
+            </div>
+            <div class="rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+              WhatsApp: where the client already is
+            </div>
+          </div>
+        </div>
+      </Card>
+    </div>
+  </div>
+</Section>

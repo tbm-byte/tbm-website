@@ -1,0 +1,44 @@
+---
+import Section from './ui/Section.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+
+const terms = [
+  {
+    n: '01',
+    text: "Your cycle target is calculated from your ad budget and your market's cost per qualified consultation, and agreed in writing before launch.",
+  },
+  { n: '02', text: 'Cycle one carries no target. It is calibration.' },
+  {
+    n: '03',
+    text: "Miss a target and that cycle's fee is waived in full, and the shortfall is delivered the following cycle.",
+  },
+  { n: '04', text: 'Two consecutive missed cycles and you can walk, with nothing owed.' },
+];
+---
+
+<Section id="guarantee" bg="charcoal">
+  <div class="max-w-text">
+    <Eyebrow color="blue-light">The guarantee</Eyebrow>
+    <h2 class="mt-5 text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-white md:text-[40px]">
+      How the guarantee works.
+    </h2>
+    <p class="mt-5 text-[17px] leading-[1.6] text-charcoal-muted">
+      Written into the agreement, in these words. No badge, no seal, no asterisk further down.
+    </p>
+  </div>
+
+  <ol class="mt-14 grid max-w-[820px] list-none gap-0 p-0">
+    {
+      terms.map((term) => (
+        <li class="grid grid-cols-[44px_1fr] gap-5 border-t border-charcoal-border py-7">
+          <span class="pt-0.5 text-[15px] font-semibold text-blue-light">{term.n}</span>
+          <span class="text-lg leading-[1.6] text-charcoal-body">{term.text}</span>
+        </li>
+      ))
+    }
+  </ol>
+
+  <p class="mt-10 max-w-text text-[15px] leading-[1.6] text-charcoal-muted">
+    Ad spend is paid by your firm directly to the platform and is not part of the fee waiver.
+  </p>
+</Section>

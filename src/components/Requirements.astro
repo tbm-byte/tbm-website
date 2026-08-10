@@ -1,0 +1,88 @@
+---
+import Section from './ui/Section.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+import Card from './ui/Card.astro';
+
+const fits = [
+  'You are an established U.S. immigration firm, already taking cases.',
+  'Your practice covers one or more of the supported case categories.',
+  'You can fund a per-cycle testing ad budget at or above the published minimum.',
+  'Someone at your firm responds to a new consultation within five minutes.',
+  'You want to be the only firm in your case category and metro.',
+];
+
+const notFits = [
+  'You want leads sold by the batch.',
+  'You want someone to post on social media.',
+  'You cannot staff five-minute follow-up.',
+  'You are looking for the cheapest option.',
+];
+
+const minimums = [
+  { cat: 'Family petitions', amt: '$3,000 per cycle' },
+  { cat: 'Removal defense', amt: '$4,000 per cycle' },
+  { cat: 'Employment visas', amt: '$5,000 per cycle' },
+  { cat: 'Humanitarian relief', amt: '$3,000 per cycle' },
+  { cat: 'Naturalization', amt: '$2,500 per cycle' },
+];
+---
+
+<Section id="requirements">
+  <div class="max-w-text">
+    <Eyebrow>Requirements</Eyebrow>
+    <h2 class="mt-5 text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-charcoal md:text-[40px]">
+      This only works under certain conditions.
+    </h2>
+    <p class="mt-5 text-[17px] leading-[1.6] text-gray-muted">
+      Published so you can rule it out in ninety seconds without a call.
+    </p>
+  </div>
+
+  <div class="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
+    <Card padding="px-8 py-9">
+      <h3 class="text-xl font-semibold text-charcoal">This fits if</h3>
+      <div class="mt-6 grid gap-4">
+        {
+          fits.map((f) => (
+            <div class="grid grid-cols-[20px_1fr] items-start gap-3.5">
+              <span class="text-[15px] font-bold leading-[1.6] text-blue">✓</span>
+              <span class="text-base leading-[1.6] text-charcoal">{f}</span>
+            </div>
+          ))
+        }
+      </div>
+    </Card>
+    <Card bg="gray-light" padding="px-8 py-9">
+      <h3 class="text-xl font-semibold text-charcoal">This doesn't fit if</h3>
+      <div class="mt-6 grid gap-4">
+        {
+          notFits.map((f) => (
+            <div class="grid grid-cols-[20px_1fr] items-start gap-3.5">
+              <span class="text-[15px] font-medium leading-[1.6] text-gray-muted">×</span>
+              <span class="text-base leading-[1.6] text-gray-muted">{f}</span>
+            </div>
+          ))
+        }
+      </div>
+    </Card>
+  </div>
+
+  <Card padding="px-8 py-9" class="mt-6">
+    <Eyebrow>Published ad-spend minimums</Eyebrow>
+    <div class="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
+      {
+        minimums.map((m) => (
+          <div class="border-t border-border pt-4">
+            <div class="text-[15px] font-semibold text-charcoal">{m.cat}</div>
+            <div class="mt-1.5 text-[15px] text-gray-muted">{m.amt}</div>
+          </div>
+        ))
+      }
+    </div>
+    <p class="mt-7 max-w-[680px] text-base leading-[1.6] text-gray-muted">
+      These are testing budgets, not volume budgets. Below them there isn't enough data in a
+      cycle to tell a bad audience from a bad week, and calibration turns into guessing. Spend
+      is paid by your firm directly to the platform. TBM never touches it.
+    </p>
+  </Card>
+</Section>

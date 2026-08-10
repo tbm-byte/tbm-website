@@ -1,0 +1,45 @@
+---
+import Section from './ui/Section.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+
+const paragraphs = [
+  'I am Ben Mount. TBM is me. You will not be handed to an account manager, and the person on the strategy call is the person who builds and runs the system.',
+  "I taught myself to code as a teenager, then spent years in SaaS sales and high-ticket closing, which is where I learned what actually happens between an inquiry and a signed engagement. After that I moved into operations and systems work, building the processes behind other people's pipelines.",
+  'Immigration specifically, because it is the one area where the usual playbook fails on its own terms: two languages, five very different case categories, real advertising regulation, and decisions that take six to twelve months. Generic funnels do not survive any of that.',
+  'TBM is new, and I would rather say that plainly than dress it up. I am taking on a small number of founding firms: few enough that I run every account personally and can afford to carry the risk in the guarantee terms above.',
+  'If your read is that it is too early to work with someone new, that is a reasonable call. Either way, tell me on the call and I will give you a straight answer about whether this fits.',
+];
+---
+
+<Section id="founder" bg="gray-light" borderTop borderBottom>
+  <div class="grid grid-cols-1 items-start gap-16 md:grid-cols-2">
+    <div>
+      <div
+        class="flex aspect-[4/5] w-full items-center justify-center rounded-card border border-border bg-white p-6 [background-image:repeating-linear-gradient(135deg,theme(colors.gray-light)_0px,theme(colors.gray-light)_10px,theme(colors.white)_10px,theme(colors.white)_20px)]"
+      >
+        <span class="text-center font-mono text-xs uppercase leading-[1.7] tracking-[0.06em] text-gray-muted">
+          image slot, photograph of Ben Mount<br />
+          natural light, shallow depth of field, plain interior<br />
+          portrait 4:5 · no stock photography
+        </span>
+      </div>
+      <p class="mt-4 text-sm text-gray-muted">Ben Mount, Founder, TBM Ventures LLC</p>
+    </div>
+
+    <div class="max-w-[620px]">
+      <Eyebrow>From the founder</Eyebrow>
+      <div class="mt-6 grid gap-5">
+        {paragraphs.map((p) => <p class="text-[17px] leading-[1.7] text-charcoal">{p}</p>)}
+      </div>
+      <p class="mt-7 text-[17px] font-semibold text-charcoal">Ben Mount, Founder</p>
+      <p class="mt-5 text-[17px]">
+        <a href="mailto:ben@thebenmount.com" class="border-b border-blue/30 text-blue">
+          ben@thebenmount.com
+        </a>
+      </p>
+      <p class="mt-2 text-sm text-gray-muted">
+        Write directly. It comes to me, not to an inbox someone else reads.
+      </p>
+    </div>
+  </div>
+</Section>

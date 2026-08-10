@@ -1,0 +1,43 @@
+---
+import Button from './ui/Button.astro';
+
+const links = [
+  { href: '#method', label: 'The Method' },
+  { href: '#guarantee', label: 'Guarantee' },
+  { href: '#requirements', label: 'Requirements' },
+  { href: '#faq', label: 'FAQ' },
+];
+---
+
+<header
+  data-nav
+  class="sticky top-0 z-50 border-b border-transparent bg-white transition-colors duration-200"
+>
+  <div class="mx-auto flex h-[72px] max-w-content items-center justify-between gap-6 px-6">
+    <a href="#top" class="text-xl font-bold tracking-[-0.02em] text-charcoal">TBM</a>
+    <nav class="flex items-center gap-8">
+      <div class="hidden items-center gap-8 md:flex">
+        {
+          links.map((link) => (
+            <a href={link.href} class="text-[15px] font-medium text-charcoal hover:text-blue">
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+      <Button href="#book" size="sm">Book a Strategy Call</Button>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const nav = document.querySelector<HTMLElement>('[data-nav]');
+  if (nav) {
+    const onScroll = () => {
+      nav.classList.toggle('border-border', window.scrollY > 8);
+      nav.classList.toggle('border-transparent', window.scrollY <= 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+</script>

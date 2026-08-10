@@ -1,0 +1,67 @@
+---
+import Section from './ui/Section.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+
+const faqs = [
+  {
+    q: 'What does this cost?',
+    a: 'A monthly retainer plus a fee for each booked, screened consultation. The exact figures depend on your case category and market, and are covered on the strategy call. Ad spend is separate and paid by your firm directly to the platform.',
+  },
+  {
+    q: "You're new. Why would I work with you?",
+    a: "Straight answer: TBM has no client roster, no case studies and no testimonials, and this page does not pretend otherwise. What you can judge me on is the method, the published requirements and the guarantee terms, which are all written down above before you talk to me. I am taking on a small number of founding firms deliberately, few enough that I run every account myself, and the guarantee is structured so the risk of being early sits with me, not with you. If that isn't enough, the honest recommendation is to wait and watch.",
+  },
+  {
+    q: 'How do you handle state bar advertising rules?',
+    a: "Every ad, landing page and follow-up message is reviewed against your state bar's advertising rules: outcome claims, specialization language, required disclosures and record-keeping, alongside platform policy and FTC substantiation. Your firm approves the final copy before anything runs. TBM does not give legal advice; your firm remains responsible for compliance and has the last word.",
+  },
+  {
+    q: 'What counts as a "qualified" consultation?',
+    a: 'The definition is agreed in writing before launch and is specific to your firm: case category, jurisdiction, filing stage, no existing counsel, and a booked appointment on your calendar with contact details confirmed. Anything outside that definition is not counted toward a cycle target.',
+  },
+  {
+    q: 'What do you need from my team?',
+    a: 'One person who responds to a new consultation within five minutes during business hours, access to your calendar and ad accounts, an intake path that can hold a Spanish-speaking caller, and one approval pass on copy before launch. That is the whole ask.',
+  },
+  {
+    q: 'Do you sell the same leads to other firms?',
+    a: 'No. Nothing is sold by the batch and nothing is shared. One firm per case category per metro. While you are a client, I do not run that category in your market for anyone else.',
+  },
+  {
+    q: 'What happens after the first 30 days?',
+    a: 'The system moves into repeating cycles: measure, adjust targeting and copy, expand the categories that produce retainers, cut what does not. Cycle targets are set at the start of each cycle. There is no long lock-in. The guarantee terms above describe exactly how you leave.',
+  },
+  {
+    q: 'Which case categories do you support?',
+    a: 'Family-based petitions, removal defense, employment-based visas, humanitarian relief (asylum, U/T visas, VAWA) and naturalization. If your practice is concentrated somewhere outside those, I will say so on the call rather than take the engagement.',
+  },
+];
+---
+
+<Section id="faq">
+  <div class="mx-auto max-w-[820px]">
+    <Eyebrow>Questions</Eyebrow>
+    <h2 class="mt-5 text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-charcoal md:text-[40px]">
+      The things worth asking first.
+    </h2>
+
+    <div class="mt-14">
+      {
+        faqs.map((item) => (
+          <details class="group border-b border-border">
+            <summary
+              class="flex min-h-11 list-none cursor-pointer items-start justify-between gap-6 py-[26px] [&::-webkit-details-marker]:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
+            >
+              <span class="text-lg font-semibold leading-[1.4] text-charcoal">{item.q}</span>
+              <span class="relative h-[22px] w-[22px] flex-none">
+                <span class="absolute left-1/2 top-1/2 h-0.5 w-3 -translate-x-1/2 -translate-y-1/2 bg-blue" />
+                <span class="absolute left-1/2 top-1/2 h-3 w-0.5 -translate-x-1/2 -translate-y-1/2 bg-blue transition-opacity group-open:opacity-0" />
+              </span>
+            </summary>
+            <p class="pb-[30px] pr-14 text-[17px] leading-[1.7] text-gray-muted">{item.a}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</Section>

@@ -1,0 +1,28 @@
+---
+// Line style, 1.5px stroke, 24px, charcoal or blue. Pass path/shape elements as children.
+// e.g. <Icon color="blue"><line x1="2" y1="5" x2="22" y2="5" /></Icon>
+interface Props {
+  size?: number;
+  color?: 'charcoal' | 'blue';
+  class?: string;
+}
+
+const { size = 24, color = 'charcoal', class: className = '' } = Astro.props;
+
+const strokeColor = { charcoal: '#0F1115', blue: '#2563EB' }[color];
+---
+
+<svg
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke={strokeColor}
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  class={className}
+>
+  <slot />
+</svg>

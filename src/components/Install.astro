@@ -1,0 +1,65 @@
+---
+import Section from './ui/Section.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+import Card from './ui/Card.astro';
+
+const phases = [
+  {
+    days: 'Days 1-5',
+    title: 'Diagnosis',
+    body: 'Your case mix, current intake path, response times and past ad history. We agree the qualified-consultation definition and the cycle target in writing before anything is built.',
+  },
+  {
+    days: 'Days 6-14',
+    title: 'Build',
+    body: 'Category campaigns, bilingual landing pages and screening forms, tracking, and the nurture sequences. Everything passes compliance review and your approval before it goes live.',
+  },
+  {
+    days: 'Days 15-30',
+    title: 'Calibration',
+    body: 'Traffic runs, screening thresholds tighten, and audiences and copy are adjusted against real consultations. Cycle one carries no target. This is the measuring period.',
+  },
+  {
+    days: 'Cycle 2 onward',
+    title: 'Compounding',
+    body: "Targets apply. Budget shifts toward the categories producing retainers, nurture starts returning earlier inquiries, and each cycle starts from the last one's data.",
+  },
+];
+---
+
+<Section id="install" bg="gray-light" borderTop borderBottom>
+  <div class="max-w-text">
+    <Eyebrow>The install</Eyebrow>
+    <h2 class="mt-5 text-[28px] font-bold leading-[1.15] tracking-[-0.02em] text-charcoal md:text-[40px]">
+      Thirty days, four phases.
+    </h2>
+    <p class="mt-5 text-[17px] leading-[1.6] text-gray-muted">
+      What actually happens between signing and a screened consultation landing on your
+      calendar.
+    </p>
+  </div>
+
+  <div class="mt-16 grid max-w-[840px] gap-0">
+    {
+      phases.map((phase) => (
+        <div class="grid grid-cols-[40px_1fr] gap-6">
+          <div class="flex flex-col items-center">
+            <span class="mt-[30px] h-[14px] w-[14px] flex-none rounded-full bg-blue" />
+            <span class="w-px flex-1 bg-border" />
+          </div>
+          <Card padding="px-8 py-7" class="mb-4">
+            <Eyebrow>{phase.days}</Eyebrow>
+            <h3 class="mt-2.5 text-xl font-semibold tracking-[-0.01em] text-charcoal">
+              {phase.title}
+            </h3>
+            <p class="mt-2.5 text-base leading-[1.6] text-gray-muted">{phase.body}</p>
+          </Card>
+        </div>
+      ))
+    }
+  </div>
+
+  <p class="mt-12 text-center text-xl font-semibold tracking-[-0.01em] text-charcoal">
+    One system. Live in 30 days.
+  </p>
+</Section>

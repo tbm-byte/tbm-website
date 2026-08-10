@@ -1,0 +1,47 @@
+---
+// Primary: Primary Blue fill, white Semi Bold text, 8px radius, arrow glyph.
+// Secondary: white fill, 1px border, charcoal text. See CLAUDE.md "Components".
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md';
+  arrow?: boolean;
+  type?: 'button' | 'submit';
+  class?: string;
+}
+
+const {
+  href,
+  variant = 'primary',
+  size = 'md',
+  arrow = true,
+  type = 'button',
+  class: className = '',
+} = Astro.props;
+
+const base =
+  'inline-flex items-center justify-center gap-2 rounded-btn font-semibold transition-colors ' +
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue';
+
+const variants = {
+  primary: 'bg-blue text-white hover:bg-blue-deep',
+  secondary: 'border border-border bg-white text-charcoal hover:border-charcoal',
+};
+
+// h-11 (44px) meets the 44px minimum tap target on its own.
+const sizes = {
+  sm: 'h-11 px-[18px] text-[15px]',
+  md: 'h-[52px] px-6 text-base',
+};
+
+const Tag = href ? 'a' : 'button';
+---
+
+<Tag
+  href={href}
+  type={href ? undefined : type}
+  class:list={[base, variants[variant], sizes[size], className]}
+>
+  <slot />
+  {arrow && <span aria-hidden="true">→</span>}
+</Tag>

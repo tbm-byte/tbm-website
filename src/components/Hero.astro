@@ -1,0 +1,42 @@
+---
+import Section from './ui/Section.astro';
+import Eyebrow from './ui/Eyebrow.astro';
+import Button from './ui/Button.astro';
+
+// Hero's vertical padding is a measured exception to the standard section
+// rhythm — 128px top / 120px bottom desktop, 72px/72px mobile. See design/NOTES.md.
+---
+
+<Section id="top" padding="py-section-mobile md:pb-section md:pt-[128px]">
+  <div class="mx-auto max-w-[900px] text-center">
+    <Eyebrow>FOR U.S. IMMIGRATION LAW FIRMS</Eyebrow>
+
+    <h1
+      class="mt-6 text-[36px] font-bold leading-[1.05] tracking-[-0.02em] text-charcoal md:text-[60px]"
+    >
+      Qualified consultations. <span class="text-blue">Screened</span> before they reach your calendar.
+    </h1>
+
+    <p class="mx-auto mt-7 max-w-[620px] text-[17px] leading-[1.6] text-gray-muted">
+      A four-layer acquisition system built for immigration cases — case-category routing,
+      bilingual screening, compliance review, and nurture built for decision cycles that run
+      six to twelve months.
+    </p>
+
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
+      <Button href="#book">Book a Strategy Call</Button>
+      <a
+        href="#method"
+        class="inline-flex h-[52px] items-center gap-2 text-base font-medium text-charcoal transition-colors hover:text-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
+      >
+        See how the system works
+        <span class="text-blue" aria-hidden="true">↓</span>
+      </a>
+    </div>
+
+    <p class="mx-auto mt-10 max-w-[560px] text-sm leading-[1.6] text-gray-muted">
+      One firm per case category, per metro. Currently onboarding a small number of founding
+      firms.
+    </p>
+  </div>
+</Section>
