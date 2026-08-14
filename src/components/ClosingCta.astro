@@ -1,6 +1,7 @@
 ---
 import Section from './ui/Section.astro';
 import Button from './ui/Button.astro';
+import { BOOKING_URL } from '../lib/links';
 ---
 
 <Section id="book" bg="gray-light" borderTop>
@@ -9,11 +10,11 @@ import Button from './ui/Button.astro';
       Let's find out whether this fits your firm.
     </h2>
     <p class="mt-5 text-[17px] leading-[1.6] text-gray-muted">
-      A 30-minute call covering your current intake, your case mix, your numbers, and a
+      A 45-minute call covering your current intake, your case mix, your numbers, and a
       straight answer either way.
     </p>
     <div class="mt-9 flex justify-center">
-      <Button href="mailto:ben@thebenmount.com?subject=Strategy%20call">Book a Strategy Call</Button>
+      <Button href={BOOKING_URL} external>Book a Strategy Call</Button>
     </div>
   </div>
 </Section>

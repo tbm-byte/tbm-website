@@ -1,5 +1,6 @@
 ---
 import Button from './ui/Button.astro';
+import { BOOKING_URL } from '../lib/links';
 
 const links = [
   { href: '#method', label: 'The Method' },
@@ -25,7 +26,7 @@ const links = [
           ))
         }
       </div>
-      <Button href="#book" size="sm">Book a Strategy Call</Button>
+      <Button href={BOOKING_URL} external size="sm">Book a Strategy Call</Button>
     </nav>
   </div>
 </header>

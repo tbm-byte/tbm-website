@@ -7,6 +7,8 @@ interface Props {
   size?: 'sm' | 'md';
   arrow?: boolean;
   type?: 'button' | 'submit';
+  /** Opens href in a new tab (external booking link, etc.) — ignored without href. */
+  external?: boolean;
   class?: string;
 }
 
@@ -16,6 +18,7 @@ const {
   size = 'md',
   arrow = true,
   type = 'button',
+  external = false,
   class: className = '',
 } = Astro.props;
 
@@ -40,6 +43,8 @@ const Tag = href ? 'a' : 'button';
 <Tag
   href={href}
   type={href ? undefined : type}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
   class:list={[base, variants[variant], sizes[size], className]}
 >
   <slot />

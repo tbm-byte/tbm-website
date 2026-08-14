@@ -2,6 +2,7 @@
 import Section from './ui/Section.astro';
 import Eyebrow from './ui/Eyebrow.astro';
 import Button from './ui/Button.astro';
+import { BOOKING_URL } from '../lib/links';
 
 // Hero's vertical padding is a measured exception to the standard section
 // rhythm — 128px top / 120px bottom desktop, 72px/72px mobile. See design/NOTES.md.
@@ -24,7 +25,7 @@ import Button from './ui/Button.astro';
     </p>
 
     <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
-      <Button href="#book">Book a Strategy Call</Button>
+      <Button href={BOOKING_URL} external>Book a Strategy Call</Button>
       <a
         href="#method"
         class="inline-flex h-[52px] items-center gap-2 text-base font-medium text-charcoal transition-colors hover:text-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue"
