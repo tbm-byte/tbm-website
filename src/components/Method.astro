@@ -72,18 +72,25 @@ const boxText = 'mt-2 text-base leading-normal text-charcoal';
         </div>
       </div>
       <Card padding="p-10">
-        <div class="flex items-center">
-          <div class="w-[132px] flex-none rounded-lg border-[1.5px] border-charcoal px-3 py-4 text-center text-[13px] font-semibold text-charcoal">
+        <!--
+          Mobile stacks Inquiry above a plain full-width chip list, no
+          connector lines — full-width block children can't hit the
+          flex/grid min-width:auto overflow trap the row layout needs
+          min-w-0 for below, since there's no sibling competing for space.
+          The row layout (with connectors) only applies at lg+.
+        -->
+        <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-0">
+          <div class="w-full rounded-lg border-[1.5px] border-charcoal px-3 py-4 text-center text-[13px] font-semibold text-charcoal lg:w-[132px] lg:flex-none">
             Inquiry
           </div>
-          <div class="h-px w-7 flex-none bg-border"></div>
-          <div class="my-5 w-px flex-none self-stretch bg-border"></div>
-          <div class="grid min-w-0 flex-1 gap-2.5">
+          <div class="hidden h-px w-7 flex-none bg-border lg:block"></div>
+          <div class="my-5 hidden w-px flex-none self-stretch bg-border lg:block"></div>
+          <div class="grid gap-2.5 lg:min-w-0 lg:flex-1">
             {
               categories.map((c) => (
-                <div class="flex min-w-0 items-center">
-                  <span class="h-px w-7 flex-none bg-border" />
-                  <div class="flex min-w-0 flex-1 items-center gap-2.5 break-words rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+                <div class="flex items-center lg:min-w-0">
+                  <span class="hidden h-px w-7 flex-none bg-border lg:block" />
+                  <div class="flex w-full items-center gap-2.5 break-words rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal lg:min-w-0 lg:w-auto lg:flex-1">
                     <span class="h-[6px] w-[6px] flex-none rounded-full bg-blue" />
                     {c}
                   </div>
@@ -124,19 +131,19 @@ const boxText = 'mt-2 text-base leading-normal text-charcoal';
       </div>
       <Card padding="p-10" class="lg:order-1">
         <div class="grid justify-items-center gap-2.5">
-          <div class="w-full rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
+          <div class="w-full break-words rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
             Ad, EN / ES
           </div>
-          <div class="w-[88%] rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
+          <div class="w-[88%] break-words rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
             Landing page, EN / ES
           </div>
-          <div class="w-[74%] rounded-lg border-[1.5px] border-blue p-3.5 text-center text-[13px] font-semibold text-blue">
+          <div class="w-[74%] break-words rounded-lg border-[1.5px] border-blue p-3.5 text-center text-[13px] font-semibold text-blue">
             Screening form, filter
           </div>
-          <div class="w-[58%] rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
+          <div class="w-[58%] break-words rounded-lg border border-border p-3.5 text-center text-[13px] font-medium text-charcoal">
             Confirmation, EN / ES
           </div>
-          <div class="w-[44%] rounded-lg border border-charcoal p-3.5 text-center text-[13px] font-semibold text-charcoal">
+          <div class="w-[44%] break-words rounded-lg border border-charcoal p-3.5 text-center text-[13px] font-semibold text-charcoal">
             Your calendar
           </div>
         </div>
@@ -225,13 +232,13 @@ const boxText = 'mt-2 text-base leading-normal text-charcoal';
             }
           </div>
           <div class="mt-7 grid gap-2.5">
-            <div class="rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+            <div class="break-words rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
               Email: filing steps, timelines, cost
             </div>
-            <div class="rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+            <div class="break-words rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
               SMS: reminders and re-engagement
             </div>
-            <div class="rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+            <div class="break-words rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
               WhatsApp: where the client already is
             </div>
           </div>
