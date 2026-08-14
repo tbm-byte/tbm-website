@@ -78,12 +78,12 @@ const boxText = 'mt-2 text-base leading-normal text-charcoal';
           </div>
           <div class="h-px w-7 flex-none bg-border"></div>
           <div class="my-5 w-px flex-none self-stretch bg-border"></div>
-          <div class="grid flex-1 gap-2.5">
+          <div class="grid min-w-0 flex-1 gap-2.5">
             {
               categories.map((c) => (
-                <div class="flex items-center">
+                <div class="flex min-w-0 items-center">
                   <span class="h-px w-7 flex-none bg-border" />
-                  <div class="flex flex-1 items-center gap-2.5 rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
+                  <div class="flex min-w-0 flex-1 items-center gap-2.5 break-words rounded-lg border border-border px-3.5 py-3 text-[13px] font-medium text-charcoal">
                     <span class="h-[6px] w-[6px] flex-none rounded-full bg-blue" />
                     {c}
                   </div>
@@ -172,11 +172,11 @@ const boxText = 'mt-2 text-base leading-normal text-charcoal';
         <div class="grid gap-3">
           {
             checks.map((check) => (
-              <div class="flex items-center gap-3.5 rounded-lg border border-border px-[18px] py-4">
+              <div class="flex min-w-0 items-center gap-3.5 rounded-lg border border-border px-[18px] py-4">
                 <span class="flex h-[18px] w-[18px] flex-none items-center justify-center rounded border-[1.5px] border-blue text-xs font-bold leading-none text-blue">
                   ✓
                 </span>
-                <span class="text-[13px] font-medium text-charcoal">{check}</span>
+                <span class="min-w-0 break-words text-[13px] font-medium text-charcoal">{check}</span>
               </div>
             ))
           }
