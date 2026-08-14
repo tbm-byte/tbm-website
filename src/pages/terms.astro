@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/ui/Section.astro';
+
+const h2 = 'mt-12 text-2xl font-bold tracking-[-0.01em] text-charcoal first:mt-0';
+const p = 'mt-4 text-[17px] leading-[1.7] text-gray-muted';
+---
+
+<Layout
+  title="Terms of Service — TBM"
+  description="Terms of use for the TBM Ventures LLC website."
+>
+  <Section id="terms" padding="pt-section-mobile pb-section-mobile md:pt-section md:pb-section">
+    <div class="mx-auto max-w-text">
+      <h1 class="text-[36px] font-bold leading-[1.15] tracking-[-0.02em] text-charcoal md:text-[40px]">
+        Terms of Service
+      </h1>
+      <p class="mt-4 text-sm text-gray-muted">
+        Effective August 14, 2026. These terms cover use of this website only — they are not
+        the services agreement between TBM Ventures LLC and a client firm.
+      </p>
+
+      <h2 class={h2}>Acceptance</h2>
+      <p class={p}>
+        By using this website, you agree to these terms. If you don't agree, don't use the
+        site.
+      </p>
+
+      <h2 class={h2}>What this site is</h2>
+      <p class={p}>
+        This is an informational and marketing website for TBM Ventures LLC ("TBM"), a
+        client-acquisition partner for U.S. immigration law firms. The site does not process
+        payments or bookings directly. Scheduling a strategy call happens through Cal.com, a
+        third-party tool. Any actual engagement — the method, guarantee terms, pricing, and
+        cycle targets described on this site — becomes binding only once it's set out in a
+        signed services agreement between TBM and a client firm. Nothing on this site alone is
+        that agreement.
+      </p>
+
+      <h2 class={h2}>No legal advice</h2>
+      <p class={p}>
+        TBM Ventures LLC is not a law firm and does not practice law or give legal advice.
+        Nothing on this site, or in TBM's compliance review process, is legal advice to a
+        client firm or to that firm's clients. Client firms remain responsible for their own
+        legal and regulatory compliance, including state bar advertising rules.
+      </p>
+
+      <h2 class={h2}>Use of this site</h2>
+      <p class={p}>
+        You may browse this site for its intended purpose — learning about TBM's services and
+        booking a strategy call. You may not scrape, copy, or republish its content, attempt to
+        disrupt or gain unauthorized access to it, or use it for any unlawful purpose. The TBM
+        name, wordmark, and site content are the property of TBM Ventures LLC.
+      </p>
+
+      <h2 class={h2}>Disclaimers</h2>
+      <p class={p}>
+        This site is provided as is, without warranty of any kind. Descriptions of TBM's
+        method and guarantee reflect how the program is structured; they are not a guarantee of
+        outcome for any particular firm outside the specific terms agreed in a signed services
+        agreement.
+      </p>
+
+      <h2 class={h2}>Limitation of liability</h2>
+      <p class={p}>
+        To the extent permitted by law, TBM Ventures LLC is not liable for indirect,
+        incidental, or consequential damages arising from your use of this website.
+        {' '}
+        {'{{TODO: confirm liability terms and any cap with counsel before this is treated as final}}'}
+      </p>
+
+      <h2 class={h2}>Governing law</h2>
+      <p class={p}>These terms are governed by the laws of {'{{TODO: governing state}}'}.</p>
+
+      <h2 class={h2}>Changes</h2>
+      <p class={p}>
+        We may update these terms from time to time. Continued use of the site after a change
+        means you accept the updated terms.
+      </p>
+
+      <h2 class={h2}>Contact</h2>
+      <p class={p}>
+        Questions about these terms: <a
+          href="mailto:ben@thebenmount.com"
+          class="border-b border-blue/30 text-blue">ben@thebenmount.com</a
+        >.
+      </p>
+    </div>
+  </Section>
+</Layout>

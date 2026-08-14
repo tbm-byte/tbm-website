@@ -3,10 +3,10 @@ import Button from './ui/Button.astro';
 import { BOOKING_URL } from '../lib/links';
 
 const links = [
-  { href: '#method', label: 'The Method' },
-  { href: '#guarantee', label: 'Guarantee' },
-  { href: '#requirements', label: 'Requirements' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/#method', label: 'The Method' },
+  { href: '/#guarantee', label: 'Guarantee' },
+  { href: '/#requirements', label: 'Requirements' },
+  { href: '/#faq', label: 'FAQ' },
 ];
 ---
 
@@ -15,7 +15,7 @@ const links = [
   class="sticky top-0 z-50 border-b border-transparent bg-white transition-colors duration-200"
 >
   <div class="mx-auto flex h-[72px] max-w-content items-center justify-between gap-6 px-6">
-    <a href="#top" class="text-xl font-bold tracking-[-0.02em] text-charcoal">TBM</a>
+    <a href="/#top" class="text-xl font-bold tracking-[-0.02em] text-charcoal">TBM</a>
     <nav class="flex items-center gap-8">
       <div class="hidden items-center gap-8 md:flex">
         {
