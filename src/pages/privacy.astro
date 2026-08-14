@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/ui/Section.astro';
+
+const h2 = 'mt-12 text-2xl font-bold tracking-[-0.01em] text-charcoal first:mt-0';
+const p = 'mt-4 text-[17px] leading-[1.7] text-gray-muted';
+---
+
+<Layout
+  title="Privacy Policy — TBM"
+  description="How TBM Ventures LLC collects, uses, and protects information."
+>
+  <Section id="privacy" padding="pt-section-mobile pb-section-mobile md:pt-section md:pb-section">
+    <div class="mx-auto max-w-text">
+      <h1 class="text-[36px] font-bold leading-[1.15] tracking-[-0.02em] text-charcoal md:text-[40px]">
+        Privacy Policy
+      </h1>
+      <p class="mt-4 text-sm text-gray-muted">
+        Effective August 14, 2026. TBM Ventures LLC ("TBM," "we," "us").
+      </p>
+
+      <h2 class={h2}>Overview</h2>
+      <p class={p}>
+        This policy covers two things: how we handle information from visitors to this
+        website, and how we handle information that passes through the screening systems we
+        build and run for client law firms. If you're a prospective client firm, this is what
+        to expect. If you're someone who submitted a screening form on a campaign we run for
+        one of our client firms, the "Information from client campaigns" section below applies
+        to you.
+      </p>
+
+      <h2 class={h2}>Information this website collects</h2>
+      <p class={p}>
+        This site does not use cookies, analytics, or tracking scripts, and it does not run
+        any advertising pixels. We don't collect anything automatically when you browse it.
+      </p>
+      <p class={p}>
+        If you click "Book a Strategy Call," you're taken to Cal.com, a third-party scheduling
+        tool, to pick a time and provide your name, email, and whatever you choose to share
+        about your firm. That's governed by Cal.com's own privacy policy, not this one. If you
+        email us directly, we keep that correspondence to respond to you and, if you become a
+        client, to service the engagement.
+      </p>
+
+      <h2 class={h2}>Information from client campaigns</h2>
+      <p class={p}>
+        When we run a case-category campaign for a client law firm, the screening forms we
+        build collect information relevant to that firm's intake: case category, jurisdiction,
+        filing history, contact details, and language preference. That information is
+        collected on behalf of, and for the benefit of, the retaining firm — it is routed to
+        their calendar and their intake process. We do not sell it, and we do not share it with
+        any other firm. It is used only to operate the screening and nurture system described
+        on this site for the firm that collected it.
+      </p>
+
+      <h2 class={h2}>How we use information</h2>
+      <p class={p}>
+        To respond to inquiries, to deliver the services a client firm has contracted for, to
+        route qualified consultations to the correct calendar, and to keep the compliance and
+        billing records the engagement requires.
+      </p>
+
+      <h2 class={h2}>Sharing</h2>
+      <p class={p}>
+        We do not sell personal information. We share it only with the service providers
+        necessary to run the system — ad platforms, scheduling and messaging tools (email,
+        SMS, WhatsApp) — each governed by their own privacy terms, and, for campaign leads,
+        with the client firm that the campaign was run for.
+      </p>
+
+      <h2 class={h2}>Your rights</h2>
+      <p class={p}>
+        To access, correct, or request deletion of information we hold about you, email
+        <a href="mailto:ben@thebenmount.com" class="border-b border-blue/30 text-blue">
+          ben@thebenmount.com
+        </a>. If you submitted a form on a client firm's campaign, we can route that request to
+        the firm as well, since they hold the underlying case relationship.
+      </p>
+
+      <h2 class={h2}>Changes to this policy</h2>
+      <p class={p}>
+        If this policy changes, we'll update the effective date above. Material changes will
+        be reflected here before they take effect.
+      </p>
+
+      <h2 class={h2}>Contact</h2>
+      <p class={p}>
+        Questions about this policy: <a
+          href="mailto:ben@thebenmount.com"
+          class="border-b border-blue/30 text-blue">ben@thebenmount.com</a
+        >. This policy is governed by the laws of the State of Wyoming.
+      </p>
+    </div>
+  </Section>
+</Layout>

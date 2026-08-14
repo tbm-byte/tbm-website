@@ -1,6 +1,5 @@
 ---
-import '../styles/global.css';
-import Nav from '../components/Nav.astro';
+import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Problem from '../components/Problem.astro';
 import Method from '../components/Method.astro';
@@ -10,33 +9,19 @@ import Requirements from '../components/Requirements.astro';
 import Founder from '../components/Founder.astro';
 import Faq from '../components/Faq.astro';
 import ClosingCta from '../components/ClosingCta.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TBM — Qualified consultations for U.S. immigration law firms</title>
-    <meta
-      name="description"
-      content="A client-acquisition partner for U.S. immigration law firms: case-category routing, bilingual screening, compliance review, and nurture built for long decision cycles."
-    />
-  </head>
-  <body>
-    <Nav />
-    <main>
-      <Hero />
-      <Problem />
-      <Method />
-      <Install />
-      <Guarantee />
-      <Requirements />
-      <Founder />
-      <Faq />
-      <ClosingCta />
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout
+  title="TBM — Qualified consultations for U.S. immigration law firms"
+  description="A client-acquisition partner for U.S. immigration law firms: case-category routing, bilingual screening, compliance review, and nurture built for long decision cycles."
+>
+  <Hero />
+  <Problem />
+  <Method />
+  <Install />
+  <Guarantee />
+  <Requirements />
+  <Founder />
+  <Faq />
+  <ClosingCta />
+</Layout>
